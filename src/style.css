@@ -1,0 +1,38 @@
+*{
+   font-family: sans-serif; 
+}
+
+.header-inner{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.hum{
+    
+}
+
+.hum span{
+    position: relative;
+    display: block;
+}
+
+.hum-line{
+    background-color: black;
+    width: 60px;
+    height: 1px;
+}
+
+.hum-line:nth-of-type(1){
+    top: 20px;
+}
+.hum-line:nth-of-type(2){
+    top: 40px;
+}
+.hum-line:nth-of-type(3){
+    top: 60px;
+}
+
+.nav-menu{
+    display: block;
+}
