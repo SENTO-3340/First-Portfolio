@@ -1,64 +1,125 @@
+.main-move{
+  width: 100%;
+  height: auto;
+}
+
+.move-value{
+  position: absolute;
+  width: 100%;
+  top: 300px;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #fff;
+  text-shadow: 2px 2px 5px #111111;
+}
+
+header{
+  color: #fff;
+  text-shadow: 3px 3px 4px #111111;
+}
+
 .header-inner {
+  z-index: 10;
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
   display: flex;
   justify-content: space-between;
-  height: 80px;
-  width: 100%;
+  align-items: center;
   background-color: transparent;
 }
 
-.header-logo {
-  margin-top: 15px;
-  margin-left: 15px;
-  font-size: 40px;
-  font-weight: lighter;
+.header-logo{
+  font-size: 25px;
+  font-weight: normal;
+  margin-left: 10px;
 }
 
 .hum {
+  position: relative;
   width: 80px;
-  height: 80px;
+  height: inherit;
 }
 
 .hum span {
-  position: relative;
+  position: absolute;
   display: block;
-  margin: 0 auto;
 }
 
 .hum-line {
-  background-color: black;
+  background-color: #fff;
   width: 40px;
-  height: 1px;
+  height: 2px;
+  left: 20px;
+  transition: 0.8s;
 }
 
-.hum-line:nth-of-type(1) {
-  top: 20px;
-}
-.hum-line:nth-of-type(2) {
-  top: 30px;
-}
-.hum-line:nth-of-type(3) {
-  top: 40px;
-}
-
-.hum-line.is-active:nth-of-type(1) {
-  top: 30px;
-  transform: rotate(225deg);
-}
-.hum-line.is-active:nth-of-type(2) {
-  top: 30px;
-  transform: rotate(-225deg);
-}
-.hum-line.is-active:nth-of-type(3) {
-  top: 30px;
-  transform: rotate(-225deg);
-}
-
-.hum-guide {
-  top: 45px;
+.hum-guide{
+  width: 80px;
   text-align: center;
 }
 
-.nav-menu {
+/* ハンバーガーボタン初期値 */
+.hum span:nth-of-type(1){
+  top: 20px;
+}
+.hum span:nth-of-type(2){
+  top: 30px;
+}
+.hum span:nth-of-type(3){
+  top: 40px;
+}
+.hum span:nth-of-type(4){
+  top: 45px;
+}
+
+.header-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 150px;
+  background-color: #ffff0080;
+  /* ハンバーガーナビ初期値 */
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.nav-menu{
   display: block;
+  width: max-content;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding-bottom: 1px;
+  /* transform: scale(1); */
+  transition: 0.2s;
+}
+
+.nav-menu:hover{
+  transform: scale(1.05);
+  /* border-bottom: 1px solid #fff; */
+  padding-bottom: 1px;
+}
+
+/* ハンバーガーメニュー　クリック後の値（main.jsでclassに.is-activeをtoggle） */
+.hum.is-active span:nth-of-type(1){
+  top: 30px;
+  transform: rotate(-225deg);
+}
+.hum.is-active span:nth-of-type(2){
+  top: 30px;
+  transform: rotate(225deg);
+}
+.hum.is-active span:nth-of-type(3){
+  top: 30px;
+  transform: rotate(225deg);
+}
+.header-nav.is-active{
+  opacity: 100;
+  pointer-events: visible;
 }
