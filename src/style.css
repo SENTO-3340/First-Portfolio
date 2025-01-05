@@ -1,25 +1,28 @@
-.main-move{
+* {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* main move */
+
+.main-move {
   width: 100%;
   height: auto;
 }
 
-.move-value{
+.move-value {
   position: absolute;
   width: 100%;
   top: 300px;
   text-align: center;
   font-size: 30px;
-  font-family: 'Times New Roman', Times, serif;
   color: #fff;
   text-shadow: 2px 2px 5px #111111;
 }
 
-header{
+/* header */
+.header-inner {
   color: #fff;
   text-shadow: 3px 3px 4px #111111;
-}
-
-.header-inner {
   z-index: 10;
   position: fixed;
   top: 0;
@@ -32,7 +35,7 @@ header{
   background-color: transparent;
 }
 
-.header-logo{
+.header-logo {
   font-size: 25px;
   font-weight: normal;
   margin-left: 10px;
@@ -57,69 +60,110 @@ header{
   transition: 0.8s;
 }
 
-.hum-guide{
+.hum-guide {
   width: 80px;
   text-align: center;
 }
 
-/* ハンバーガーボタン初期値 */
-.hum span:nth-of-type(1){
+/* ーハンバーガーボタン初期値ー */
+.hum span:nth-of-type(1) {
   top: 20px;
 }
-.hum span:nth-of-type(2){
+.hum span:nth-of-type(2) {
   top: 30px;
 }
-.hum span:nth-of-type(3){
+.hum span:nth-of-type(3) {
   top: 40px;
 }
-.hum span:nth-of-type(4){
+/* ーーーーーーーーーーーーーー */
+.hum span:nth-of-type(4) {
   top: 45px;
 }
 
-.header-nav{
+.header-nav {
+  color: #fff;
+  text-shadow: 3px 3px 4px #111111;
+  z-index: 9;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  padding-top: 150px;
-  background-color: #ffff0080;
-  /* ハンバーガーナビ初期値 */
+  padding-top: 130px;
+  background-color: #ffff0090;
+  /* ーーハンバーガーナビ初期値ーー */
   opacity: 0;
   pointer-events: none;
+  /* ーーーーーーーーーーーーーーー */
   transition: 0.5s;
 }
 
-.nav-menu{
+.nav-menu {
+  font-size: 20px;
   display: block;
   width: max-content;
   margin: 0 auto;
   margin-bottom: 50px;
   padding-bottom: 1px;
-  /* transform: scale(1); */
   transition: 0.2s;
 }
 
-.nav-menu:hover{
+.nav-menu:hover {
   transform: scale(1.05);
-  /* border-bottom: 1px solid #fff; */
   padding-bottom: 1px;
 }
 
 /* ハンバーガーメニュー　クリック後の値（main.jsでclassに.is-activeをtoggle） */
-.hum.is-active span:nth-of-type(1){
+.hum.is-active span:nth-of-type(1) {
   top: 30px;
   transform: rotate(-225deg);
 }
-.hum.is-active span:nth-of-type(2){
+.hum.is-active span:nth-of-type(2) {
   top: 30px;
   transform: rotate(225deg);
 }
-.hum.is-active span:nth-of-type(3){
+.hum.is-active span:nth-of-type(3) {
   top: 30px;
   transform: rotate(225deg);
 }
-.header-nav.is-active{
+.header-nav.is-active {
   opacity: 100;
   pointer-events: visible;
+}
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+/* fade-in */
+.fade-in {
+  transition: 2s;
+  opacity: 0;
+}
+.fade-in.visible {
+  opacity: 100;
+}
+
+/* introduction */
+#Introduction {
+  width: 100%;
+  height: 100vh;
+}
+
+.introduction-inner{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.introduction-inner h2 {
+  font-size: 25px;
+  text-align: center;
+  padding-bottom:30px;
+}
+
+.introduction-inner p {
+  text-align: center;
+  line-height: 50px;
+}
+
+.font-size{
+  font-size: 20px;
 }
