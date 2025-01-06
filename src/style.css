@@ -20,9 +20,16 @@
 }
 
 /* header */
-.header-inner {
+.heaedr-fontColor{
   color: #fff;
   text-shadow: 3px 3px 4px #111111;
+}
+.header-fontColor.black{
+  color: #000;
+  text-shadow: none;
+}
+
+.header-inner {
   z-index: 10;
   position: fixed;
   top: 0;
@@ -81,8 +88,6 @@
 }
 
 .header-nav {
-  color: #fff;
-  text-shadow: 3px 3px 4px #111111;
   z-index: 9;
   position: fixed;
   top: 0;
