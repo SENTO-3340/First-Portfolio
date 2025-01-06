@@ -22,15 +22,35 @@ toggleNav.addEventListener('click', () => {
 // スクロールに伴うfade-in制御、header文字色制御
 window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY;
-  const contents = document.querySelectorAll('.fade-in');
-  const whiteOrBlack = document.querySelector('.header-fontColor');
-  contents.forEach((content) => {
+
+  const fadeIn = document.querySelectorAll('.fade-in');
+  fadeIn.forEach((content) => {
     const distanceToMain = content.offsetTop;
     if (scrollTop >= distanceToMain) {
       content.classList.add('visible');
-      whiteOrBlack.classList.add('black');
-    }else{
-      whiteOrBlack.classList.remove('black');
+    } else {
+      content.classList.remove('visible');
+    }
+  });
+
+//headerの文字色をスクロールに伴い変化させる制御 
+  const mainMove = document.querySelector('.main-move');
+  const color = {
+    header: document.querySelector('.header-inner'),
+    nav: document.querySelector('.header-nav'),
+    humLine: document.querySelectorAll('.hum-line'),
+  };
+  color.humLine.forEach((line) => {
+    const distanceToMove = mainMove.offsetTop;
+    const height = mainMove.offsetHeight;
+    if (scrollTop >= distanceToMove + height) {
+      color.header.classList.add('black');
+      color.nav.classList.add('black');
+      line.classList.add('black');
+    } else {
+      color.header.classList.remove('black');
+      color.nav.classList.remove('black');
+      line.classList.remove('black');
     }
   });
 });

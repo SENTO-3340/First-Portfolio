@@ -1,5 +1,6 @@
 * {
   font-family: 'Times New Roman', Times, serif;
+  scroll-behavior: smooth;
 }
 
 /* main move */
@@ -20,16 +21,9 @@
 }
 
 /* header */
-.heaedr-fontColor{
+.header-inner {
   color: #fff;
   text-shadow: 3px 3px 4px #111111;
-}
-.header-fontColor.black{
-  color: #000;
-  text-shadow: none;
-}
-
-.header-inner {
   z-index: 10;
   position: fixed;
   top: 0;
@@ -40,6 +34,11 @@
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
+}
+
+.header-inner.black{
+  color: #111111;
+  text-shadow: none;
 }
 
 .header-logo {
@@ -66,6 +65,9 @@
   left: 20px;
   transition: 0.8s;
 }
+.hum-line.black{
+  background-color: #111111;
+}
 
 .hum-guide {
   width: 80px;
@@ -88,13 +90,15 @@
 }
 
 .header-nav {
+  color: #fff;
+  text-shadow: 3px 3px 4px #111111;
   z-index: 9;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  padding-top: 130px;
+  padding-top: 60px;
   background-color: #ffff0090;
   /* ーーハンバーガーナビ初期値ーー */
   opacity: 0;
@@ -102,6 +106,12 @@
   /* ーーーーーーーーーーーーーーー */
   transition: 0.5s;
 }
+
+.header-nav.black{
+  color: #111111;
+  text-shadow: none;
+}
+
 
 .nav-menu {
   font-size: 20px;
