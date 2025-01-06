@@ -19,15 +19,18 @@ toggleNav.addEventListener('click', () => {
   toggleText.textContent = 'open';
 });
 
-// fade-in制御
+// スクロールに伴うfade-in制御、header文字色制御
 window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY;
   const contents = document.querySelectorAll('.fade-in');
+  const whiteOrBlack = document.querySelector('.header-fontColor');
   contents.forEach((content) => {
     const distanceToMain = content.offsetTop;
     if (scrollTop >= distanceToMain) {
       content.classList.add('visible');
-      
+      whiteOrBlack.classList.add('black');
+    }else{
+      whiteOrBlack.classList.remove('black');
     }
   });
 });
