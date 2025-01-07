@@ -34,6 +34,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
+  transition: 0.5s;
 }
 
 .header-inner.black{
